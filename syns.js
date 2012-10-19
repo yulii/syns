@@ -3,19 +3,24 @@
 
 	syns.tag = {
 		view: {
-			opening: '<dl class="cf">',
-			closing: '</dl>'
+			opening: '<table class="syns_tb">',
+			closing: '</table>'
 		},
 		label: {
-			opening: '<dt class="fl w25p">',
-			closing: '</dt>'
+			opening: '<tr><th>',
+			closing: '</th>'
 		},
 		element: {
-			opening: '<dd class="w75p">',
-			closing: '</dd>'
+			opening: '<td>',
+			closing: '</td></th>'
 		},
-		indent: '&nbsp;&nbsp;'
+		indent: '&nbsp;&nbsp;&nbsp;&nbsp;'
 	};
+	/**
+	 * View objects
+	 * @param {} data
+	 * @returns {}
+	 */
 	syns.view = function(data) {
 		console.log(data);
 		this.str = [];
@@ -26,7 +31,7 @@
 	};
 
 	/**
-	 * Convert to HTML String from Object data
+	 * Convert to HTML string from object data
 	 * @param {} o
 	 * @param {} i
 	 * @returns {}
